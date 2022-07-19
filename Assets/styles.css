@@ -137,9 +137,10 @@ article {
     padding-left:20px;
 }
 
-.mainproject { /*WHY WONT THIS WORK??*/
+.mainproject {
     display:flex;
     justify-content:center;
+    text-align:center;
 }
 
 #mainImg {
@@ -156,6 +157,7 @@ article {
     flex-wrap:wrap;
     justify-content:space-around;
     flex-direction:row;
+    text-align:center;
 }
 
 .subprojects div {
