@@ -1,0 +1,175 @@
+/*styling variables*/
+:root {
+    --lightfont:rgb(238, 238, 238);
+    --accentfont:'Courier New', Courier, monospace;
+}
+
+/*contains all content*/
+body {
+    background-image: linear-gradient(to top, #d2d3d4, #c3c8cf, #b4beca, #a6b3c5, 
+    #98a8c0, #8da0bd, #8398b9, #7990b6, #6f88b4, #6581b1, #5c79af, 
+    #5271ac);
+    color: var(--lightfont);
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+/*holds my main content, excluding header and footer*/
+main {
+    display:flex;
+    margin-top:20px;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+/*header-nav section*/
+header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:75px;
+}
+
+header .logo {
+    margin-left:40px;
+}
+
+.logo h2 {
+    font-family: var(--accentfont);
+}
+
+nav {
+    display:flex;
+    justify-content:flex-end;
+    margin-right:40px;
+}
+
+nav ul {
+    display: flex;
+    gap:20px;
+}
+
+nav ul li {
+    font-size: 20px;
+    font-style: bold;
+    list-style-type: none;
+}
+
+a:visited {
+    color: var(--lightfont);
+}
+
+ul li:hover {
+    color: #fff;
+    text-shadow:
+      0 0 5px var(--lightfont),
+      0 0 10px var(--lightfont),
+      0 0 20px var(--lightfont),
+      0 0 40px var(--lightfont),
+      0 0 80px var(--lightfont),
+      0 0 90px var(--lightfont),
+      0 0 100px var(--lightfont),
+      0 0 150px var(--lightfont);
+      animation: flicker 1.3s alternate; 
+      
+}
+
+@keyframes flicker {
+    0%, 15%, 20%, 25%, 50%, 60%, 100% {
+      text-shadow:
+        0 0 5px var(--lightfont),
+        0 0 10px var(--lightfont),
+        0 0 20px var(--lightfont),
+        0 0 40px var(--lightfont),
+        0 0 80px var(--lightfont),
+        0 0 90px var(--lightfont),
+        0 0 100px var(--lightfont),
+        0 0 150px var(--lightfont);
+    }
+    20%, 25%, 55% {       
+      text-shadow: none;
+    }
+  }
+
+/*left hand panel area*/
+aside {
+    display:flex;
+    flex-direction:column;
+    margin-right:20px;
+}
+
+aside div {
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+    width:450px;
+}
+
+@media (max-width:960px) {
+    aside div {
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    width:auto; 
+    }
+}
+
+#avatar {
+    max-width:80%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/*project showcase area*/
+article {
+    display:flex;
+    flex-direction:column;
+    border-left:2px solid;
+    border-color: var(--lightfont);
+    margin-top:15px;
+    padding-right:20px;
+    padding-left:20px;
+}
+
+.mainproject { /*WHY WONT THIS WORK??*/
+    display:flex;
+    justify-content:center;
+}
+
+#mainImg {
+    max-width:95%;
+    filter:brightness(40%);
+}
+
+#mainImg:hover {
+    filter:brightness(100%);
+}
+
+.subprojects {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    flex-direction:row;
+}
+
+.subprojects div {
+    margin-top:20px;
+    max-width:45%;
+}
+
+.subImg {
+    max-width:100%;
+    filter: brightness(40%);
+}
+
+.subImg:hover {
+    filter: brightness(100%);
+}
+
+
+/*footer related section*/
+footer {
+    height:200px;
+}
