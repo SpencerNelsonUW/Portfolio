@@ -1,6 +1,6 @@
-# My Personal Coding Portfolio
+# My Coding Portfolio
 
-This is my personal coding portfolio.
+This is my coding portfolio.
 
 The deployed version can be found here - https://spencernelsonuw.github.io/portfolio/
 
